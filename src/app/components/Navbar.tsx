@@ -38,18 +38,24 @@ export default function Navbar() {
         </InputRightElement>
       </InputGroup>
       <Flex justify={"center"} align={"center"}>
-        <Flex justify={"center"} align={"center"}>
-          <TfiWorld />
-          <Button variant={"navBtnclear"} p={1}>
-            English US
+        <Link href={"#"}>
+          <Flex justify={"center"} align={"center"}>
+            <TfiWorld />
+            <Button variant={"navBtnclear"} p={1}>
+              English US
+            </Button>
+            <HiOutlineChevronDown />
+          </Flex>
+        </Link>
+        <Link href={"#"}>
+          <Button variant={"navBtnWhite"}>
+            <IoIosLogIn />
+            <Text ms={2}>Login</Text>
           </Button>
-          <HiOutlineChevronDown />
-        </Flex>
-        <Button variant={"navBtnWhite"}>
-          <IoIosLogIn />
-          <Text ms={2}>Login</Text>
-        </Button>
-        <Button>Contact Us</Button>
+        </Link>
+        <Link href={"#"}>
+          <Button variant={"navBtnPurple"}>Contact Us</Button>
+        </Link>
       </Flex>
     </Flex>
   );
