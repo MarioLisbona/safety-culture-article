@@ -81,13 +81,13 @@ export default function Navbar() {
             px={4}
             borderBottom={"1px solid lightgray"}
           >
-            <Link as={"a"} href={"#"}>
+            <Link href={"#"}>
               <Flex w={"100px"} height={"20px"}>
                 <Image src={scLogo} alt="SafetfyCulture logo" />
               </Flex>
             </Link>
             <Flex justify={"center"} align={"center"}>
-              <Link as={"a"} href={"#"}>
+              <Link href={"#"}>
                 <IconButton aria-label="Search database" icon={<CiSearch />} />
               </Link>
             </Flex>
