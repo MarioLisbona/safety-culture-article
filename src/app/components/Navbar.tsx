@@ -18,8 +18,10 @@ import { CiSearch } from "react-icons/ci";
 import { TfiWorld } from "react-icons/tfi";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { IoIosLogIn } from "react-icons/io";
+import { data } from "../data/articleData";
 
 export default function Navbar() {
+  const mobileMenu = data.pageProps.mobileMenu;
   const searchBarPlaceHolder = useBreakpointValue({
     base: "Search",
     lg: "Search anything...(e.g. devices)",
@@ -92,6 +94,20 @@ export default function Navbar() {
               </Link>
             </Flex>
           </Flex>
+          {/* mapping over JSON for mobile menu options */}
+          {mobileMenu.map((item, idx) => (
+            <Link key={idx} href={`/${item.slug}`}>
+              <Flex
+                justify={"flex-start"}
+                align={"center"}
+                py={2}
+                px={4}
+                bg={"purple"}
+              >
+                {item.title}
+              </Flex>
+            </Link>
+          ))}
         </Stack>
       </Box>
     </>
