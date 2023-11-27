@@ -7,8 +7,21 @@ const navBtnPurple = defineStyle({
   borderRadius: ".5rem",
 });
 
+const navBtnWhite = defineStyle({
+  mx: "0.5rem",
+  background: "white",
+  color: "link",
+  borderRadius: ".5rem",
+});
+
+const navBtnClear = defineStyle({
+  color: "text",
+});
+
 export const appButton = defineStyleConfig({
   variants: {
     navBtnPurple,
+    navBtnWhite,
+    navBtnClear,
   },
 });

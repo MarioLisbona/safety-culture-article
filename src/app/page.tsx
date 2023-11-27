@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Text color={"link"}>This is some text testing the theme</Text>
-      <Button variant={"navBtnPurple"}>Click me</Button>
+      <Button variant={"navBtnClear"}>Click me</Button>
     </>
   );
 }
