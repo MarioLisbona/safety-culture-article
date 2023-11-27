@@ -14,7 +14,9 @@ export default function Navbar() {
       p={"3rem"}
     >
       <Link href={"/"}>
-        <Image src={scLogo} alt="SafetyCulture Logo" />
+        <Flex w={"200px"} height={"40px"}>
+          <Image src={scLogo} alt="SafetyCulture Logo" />
+        </Flex>
       </Link>
     </Flex>
   );
