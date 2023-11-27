@@ -1,4 +1,10 @@
-import { Flex, InputGroup, Input, InputRightElement } from "@chakra-ui/react";
+import {
+  Flex,
+  InputGroup,
+  Input,
+  InputRightElement,
+  Button,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import scLogo from "@/logos/sc-logo-color.svg";
@@ -27,6 +33,11 @@ export default function Navbar() {
           </Link>
         </InputRightElement>
       </InputGroup>
+      <Flex justify={"center"} align={"center"}>
+        <Button>English US</Button>
+        <Button>Login</Button>
+        <Button>Contact Us</Button>
+      </Flex>
     </Flex>
   );
 }
