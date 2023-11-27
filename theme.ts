@@ -10,6 +10,20 @@ const theme = extendTheme({
     white: "#FFFFFF",
   },
   components: { Button: appButton },
+  fonts: {
+    heading: `'Poppins', sans-serif`,
+    body: `'NotoSans', sans-serif`,
+  },
+  textStyles: {
+    heading: {
+      fontFamily: "heading",
+      fontSize: ["38px", "42px", "45px"],
+    },
+    body: {
+      fontFamily: "body",
+      fontSize: ["18px", "26px", "28px"],
+    },
+  },
 });
 
 export default theme;
