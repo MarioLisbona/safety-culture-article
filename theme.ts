@@ -18,10 +18,21 @@ const theme = extendTheme({
     heading: {
       fontFamily: "heading",
       fontSize: ["38px", "42px", "45px"],
+      fontWeight: "700",
+      lineHeight: "125%",
+      color: "text",
     },
     body: {
       fontFamily: "body",
-      fontSize: ["18px", "26px", "28px"],
+      fontSize: ["18px"],
+      fontWeight: "400",
+      color: "text",
+    },
+    link: {
+      fontFamily: "body",
+      fontSize: ["12px"],
+      fontWeight: "200",
+      color: "link",
     },
   },
 });
