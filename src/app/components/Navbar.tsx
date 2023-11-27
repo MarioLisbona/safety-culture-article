@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
   Box,
   Stack,
+  IconButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,8 +71,8 @@ export default function Navbar() {
       </Flex>
 
       {/* Mobile Navbar */}
-      <Box display={{ base: "flex", md: "none" }}>
-        <Stack w={"100%"} as={"nav"}>
+      <Box pb={2} display={{ base: "flex", sm: "none" }}>
+        <Stack w={"100%"} as="nav" spacing={0}>
           <Flex
             bg={"purple"}
             justify={"space-between"}
@@ -79,8 +80,18 @@ export default function Navbar() {
             py={2}
             px={4}
             borderBottom={"1px solid lightgray"}
-            h={"50px"}
-          ></Flex>
+          >
+            <Link as={"a"} href={"#"}>
+              <Flex w={"100px"} height={"20px"}>
+                <Image src={scLogo} alt="SafetfyCulture logo" />
+              </Flex>
+            </Link>
+            <Flex justify={"center"} align={"center"}>
+              <Link as={"a"} href={"#"}>
+                <IconButton aria-label="Search database" icon={<CiSearch />} />
+              </Link>
+            </Flex>
+          </Flex>
         </Stack>
       </Box>
     </>
