@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, InputGroup, Input } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import scLogo from "@/logos/sc-logo-color.svg";
@@ -18,6 +18,9 @@ export default function Navbar() {
           <Image src={scLogo} alt="SafetyCulture Logo" />
         </Flex>
       </Link>
+      <InputGroup w={"30%"} bg={"white"} size={"lg"}>
+        <Input placeholder="Search anything...(e.g. devices)" />
+      </InputGroup>
     </Flex>
   );
 }
