@@ -4,6 +4,7 @@ import {
   Input,
   InputRightElement,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import scLogo from "@/logos/sc-logo-color.svg";
 import { CiSearch } from "react-icons/ci";
 import { TfiWorld } from "react-icons/tfi";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import { IoIosLogIn } from "react-icons/io";
 
 export default function Navbar() {
   return (
@@ -43,7 +45,10 @@ export default function Navbar() {
           </Button>
           <HiOutlineChevronDown />
         </Flex>
-        <Button>Login</Button>
+        <Button variant={"navBtnWhite"}>
+          <IoIosLogIn />
+          <Text ms={2}>Login</Text>
+        </Button>
         <Button>Contact Us</Button>
       </Flex>
     </Flex>
