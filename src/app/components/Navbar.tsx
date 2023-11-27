@@ -105,10 +105,30 @@ export default function Navbar() {
                 bg={"purple"}
                 borderBottom={"1px solid lightgray"}
               >
-                <Text textStyle={"body"}>{item.title}</Text>
+                <Text textStyle={"body"} color={"text"}>
+                  {item.title}
+                </Text>
               </Flex>
             </Link>
           ))}
+          <Link href={"#"}>
+            <Flex
+              justify={"space-between"}
+              align={"center"}
+              py={2}
+              px={4}
+              bg={"purple"}
+              borderBottom={"1px solid lightgray"}
+            >
+              <Flex justify={"center"} align={"center"}>
+                <TfiWorld />
+                <Button variant={"navBtnclear"} p={2}>
+                  English US
+                </Button>
+              </Flex>
+              <HiOutlineChevronDown />
+            </Flex>
+          </Link>
         </Stack>
       </Box>
     </>
