@@ -1,7 +1,8 @@
-import { Flex, InputGroup, Input } from "@chakra-ui/react";
+import { Flex, InputGroup, Input, InputRightElement } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import scLogo from "@/logos/sc-logo-color.svg";
+import { CiSearch } from "react-icons/ci";
 
 export default function Navbar() {
   return (
@@ -20,6 +21,11 @@ export default function Navbar() {
       </Link>
       <InputGroup w={"30%"} bg={"white"} size={"lg"}>
         <Input placeholder="Search anything...(e.g. devices)" />
+        <InputRightElement>
+          <Link href={"#"}>
+            <CiSearch />
+          </Link>
+        </InputRightElement>
       </InputGroup>
     </Flex>
   );
