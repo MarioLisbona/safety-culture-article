@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import scLogo from "@/logos/sc-logo-color.svg";
 import { CiSearch } from "react-icons/ci";
+import { TfiWorld } from "react-icons/tfi";
+import { HiOutlineChevronDown } from "react-icons/hi";
 
 export default function Navbar() {
   return (
@@ -34,7 +36,11 @@ export default function Navbar() {
         </InputRightElement>
       </InputGroup>
       <Flex justify={"center"} align={"center"}>
-        <Button>English US</Button>
+        <Flex justify={"center"} align={"center"}>
+          <TfiWorld />
+          <Button>English US</Button>
+          <HiOutlineChevronDown />
+        </Flex>
         <Button>Login</Button>
         <Button>Contact Us</Button>
       </Flex>
