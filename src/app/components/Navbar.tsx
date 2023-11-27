@@ -1,3 +1,4 @@
+"use client";
 import {
   Flex,
   InputGroup,
@@ -5,6 +6,7 @@ import {
   InputRightElement,
   Button,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +17,10 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import { IoIosLogIn } from "react-icons/io";
 
 export default function Navbar() {
+  const searchBarPlaceHolder = useBreakpointValue({
+    base: "Search",
+    lg: "Search anything...(e.g. devices)",
+  });
   return (
     <Flex
       display={{ base: "none", sm: "flex" }}
@@ -30,7 +36,7 @@ export default function Navbar() {
         </Flex>
       </Link>
       <InputGroup w={"30%"} bg={"white"} size={"lg"}>
-        <Input placeholder="Search anything...(e.g. devices)" />
+        <Input placeholder={searchBarPlaceHolder} />
         <InputRightElement>
           <Link href={"#"}>
             <CiSearch />
