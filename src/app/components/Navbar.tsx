@@ -38,7 +38,9 @@ export default function Navbar() {
       <Flex justify={"center"} align={"center"}>
         <Flex justify={"center"} align={"center"}>
           <TfiWorld />
-          <Button>English US</Button>
+          <Button variant={"navBtnclear"} p={1}>
+            English US
+          </Button>
           <HiOutlineChevronDown />
         </Flex>
         <Button>Login</Button>
