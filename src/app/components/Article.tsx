@@ -1,11 +1,13 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import { Grid, GridItem, Text } from "@chakra-ui/react";
+import BreadCrumb from "./BreadCrumb";
 
 export default function Article() {
   return (
     <SectionContainer>
       <article>
+        <BreadCrumb />
         <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={4}>
           <GridItem colSpan={{ base: 1, md: 3 }} border={"1px solid gray"}>
             <Text textStyle={"heading"}>

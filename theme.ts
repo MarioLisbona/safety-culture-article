@@ -28,6 +28,18 @@ const theme = extendTheme({
       fontWeight: "400",
       color: "text",
     },
+    breadCrumbActive: {
+      fontFamily: "body",
+      fontSize: ["12px"],
+      fontWeight: "200",
+      color: "text",
+    },
+    breadCrumb: {
+      fontFamily: "body",
+      fontSize: ["12px"],
+      fontWeight: "200",
+      color: "gray",
+    },
     link: {
       fontFamily: "body",
       fontSize: ["12px"],
