@@ -6,8 +6,8 @@ export default function Article() {
   return (
     <SectionContainer>
       <article>
-        <Grid templateColumns="repeat(4, 1fr)" gap={4}>
-          <GridItem colSpan={3} border={"1px solid gray"}>
+        <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={4}>
+          <GridItem colSpan={{ base: 1, md: 3 }} border={"1px solid gray"}>
             <Text textStyle={"heading"}>
               This is some text testing the theme as a heading
             </Text>
@@ -15,7 +15,11 @@ export default function Article() {
               This is some text testing the theme as a the body
             </Text>
           </GridItem>
-          <GridItem colStart={4} colEnd={4} border={"1px solid gray"}>
+          <GridItem
+            colStart={{ base: 1, md: 4 }}
+            colEnd={{ base: 1, md: 4 }}
+            border={"1px solid gray"}
+          >
             <Text textStyle={"link"}>
               This is some text testing the theme as a the body
             </Text>
