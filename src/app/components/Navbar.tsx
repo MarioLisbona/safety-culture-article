@@ -103,8 +103,9 @@ export default function Navbar() {
                 py={2}
                 px={4}
                 bg={"purple"}
+                borderBottom={"1px solid lightgray"}
               >
-                {item.title}
+                <Text textStyle={"body"}>{item.title}</Text>
               </Flex>
             </Link>
           ))}
