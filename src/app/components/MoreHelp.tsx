@@ -13,7 +13,7 @@ export default function MoreHelp() {
     <CardComponent
       border="2px solid"
       borderColor="link"
-      w={{ base: "100vw", md: "100%" }}
+      w={{ base: "90vw", md: "100%" }}
     >
       <Flex w={"100%"} justify={"center"} align={"center"} direction={"column"}>
         <Flex

@@ -52,22 +52,24 @@ export default function Footer() {
       </Flex>
       <Flex
         w={"100%"}
-        h={"100px"}
         justify={"space-around"}
         align={"center"}
         bg={"purple"}
+        direction={{ base: "column", md: "row" }}
+        minH={"6rem"}
+        py={{ base: 4, md: 0 }}
       >
-        <Flex>
+        <Flex direction={{ base: "column", md: "row" }}>
           {footerLinks.map((item, idx) => (
             <Link key={idx} href={item.href}>
-              <Flex borderRight={"1px solid black"}>
-                <Text textStyle={"body"} px={4}>
+              <Flex borderRight={{ base: "none", md: "1px solid black" }}>
+                <Text textStyle={"body"} px={{ base: 1, md: 4 }}>
                   {item.page}
                 </Text>
               </Flex>
             </Link>
           ))}
-          <Text px={4} textStyle={"body"}>
+          <Text px={{ base: 1, md: 4 }} textStyle={"body"}>
             &copy; SafetyCulture 2023
           </Text>
         </Flex>
