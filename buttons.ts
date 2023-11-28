@@ -33,6 +33,14 @@ const cardBtnClear = defineStyle({
   px: "4rem",
   py: "1rem",
 });
+const actionBtn = defineStyle({
+  me: "1rem",
+  background: "white",
+  color: "text",
+  borderRadius: "5rem",
+  border: "2px solid",
+  borderColor: "link",
+});
 
 export const appButton = defineStyleConfig({
   variants: {
@@ -41,5 +49,6 @@ export const appButton = defineStyleConfig({
     navBtnClear,
     cardBtnPurple,
     cardBtnClear,
+    actionBtn,
   },
 });
