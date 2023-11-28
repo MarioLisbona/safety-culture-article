@@ -1,4 +1,12 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Text } from "@chakra-ui/react";
+import Link from "next/link";
+
+const footerLinks = [
+  { page: "Status", href: "/status", active: false },
+  { page: "Privacy SafetyCulture", href: "/privacy", active: false },
+  { page: "Terms and Conditions", href: "/tac", active: false },
+  { page: "Security", href: "/security", active: false },
+];
 
 export default function Footer() {
   return (
@@ -43,10 +51,22 @@ export default function Footer() {
         h={"100px"}
         justify={"space-around"}
         align={"center"}
-        borderTop={"1px solid gray"}
-        bg={"red"}
+        bg={"purple"}
       >
-        <Flex></Flex>
+        <Flex>
+          {footerLinks.map((item, idx) => (
+            <Link key={idx} href={item.href}>
+              <Flex borderRight={"1px solid black"}>
+                <Text textStyle={"body"} px={4}>
+                  {item.page}
+                </Text>
+              </Flex>
+            </Link>
+          ))}
+          <Text px={4} textStyle={"body"}>
+            &copy; SafetyCulture 2023
+          </Text>
+        </Flex>
         <Flex></Flex>
       </Flex>
     </Flex>
