@@ -55,7 +55,7 @@ export default function Article() {
               </Link>
               <Link href={"#"}>
                 <ListItem py={3} ps={2}>
-                  <Text textStyle={"link"}>What you'll need</Text>
+                  <Text textStyle={"link"}>What you&apos;ll need</Text>
                 </ListItem>
               </Link>
               <Link href={"#"}>
