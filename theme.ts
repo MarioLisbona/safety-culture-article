@@ -28,6 +28,12 @@ const theme = extendTheme({
       fontWeight: "400",
       color: "text",
     },
+    smHeading: {
+      fontFamily: "body",
+      fontSize: ["18px"],
+      fontWeight: "700",
+      color: "text",
+    },
     breadCrumbActive: {
       fontFamily: "body",
       fontSize: ["12px"],
