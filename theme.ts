@@ -17,10 +17,11 @@ const theme = extendTheme({
   textStyles: {
     heading: {
       fontFamily: "heading",
-      fontSize: ["38px", "42px", "45px"],
+      fontSize: ["38px", "42px", "65px"],
       fontWeight: "700",
       lineHeight: "125%",
       color: "text",
+      pb: "2rem",
     },
     body: {
       fontFamily: "body",

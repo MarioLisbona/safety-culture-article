@@ -13,6 +13,9 @@ import BreadCrumb from "./BreadCrumb";
 import MoreHelp from "./MoreHelp";
 import PageHelpful from "./PageHelpful";
 import Link from "next/link";
+import { data } from "../data/articleData";
+
+const { title, description } = data.pageProps.items;
 
 export default function Article() {
   return (
@@ -34,12 +37,8 @@ export default function Article() {
                 January 24, 2023
               </Text>
             </Flex>
-            <Text textStyle={"heading"}>
-              This is some text testing the theme as a heading
-            </Text>
-            <Text textStyle={"body"}>
-              This is some text testing the theme as a the body
-            </Text>
+            <Text textStyle={"heading"}>{title}</Text>
+            <Text textStyle={"body"}>{description}</Text>
             <MoreHelp />
             <PageHelpful />
           </GridItem>
