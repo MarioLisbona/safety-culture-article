@@ -3,6 +3,7 @@ import SectionContainer from "./SectionContainer";
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import BreadCrumb from "./BreadCrumb";
 import MoreHelp from "./MoreHelp";
+import PageHelpful from "./PageHelpful";
 
 export default function Article() {
   return (
@@ -18,6 +19,7 @@ export default function Article() {
               This is some text testing the theme as a the body
             </Text>
             <MoreHelp />
+            <PageHelpful />
           </GridItem>
           <GridItem colStart={{ base: 1, md: 4 }} colEnd={{ base: 1, md: 4 }}>
             <Text textStyle={"link"}>

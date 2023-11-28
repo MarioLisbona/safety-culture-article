@@ -17,44 +17,36 @@ export default function MoreHelp() {
         </Flex>
         <Flex w={"100%"} justify={"flex-start"} align={"center"}>
           <Link href={"#"}>
-            <Flex justify={"center"} align={"center"}>
-              <Button variant={"cardBtnPurple"}>
-                <BsChatLeft />
-                <Text textStyle={"body"} color={"white"} ms={2}>
-                  Live Chat
-                </Text>
-              </Button>
-            </Flex>
+            <Button variant={"cardBtnPurple"}>
+              <BsChatLeft />
+              <Text textStyle={"body"} color={"white"} ms={2}>
+                Live Chat
+              </Text>
+            </Button>
           </Link>
           <Link href={"#"}>
-            <Flex justify={"center"} align={"center"}>
-              <Button variant={"cardBtnPurple"}>
-                <MdOutlineMailOutline />
-                <Text textStyle={"body"} color={"white"} ms={2}>
-                  Email
-                </Text>
-              </Button>
-            </Flex>
+            <Button variant={"cardBtnPurple"}>
+              <MdOutlineMailOutline />
+              <Text textStyle={"body"} color={"white"} ms={2}>
+                Email
+              </Text>
+            </Button>
           </Link>
           <Link href={"#"}>
-            <Flex justify={"center"} align={"center"}>
-              <Button variant={"cardBtnPurple"}>
-                <FiPhone />
-                <Text textStyle={"body"} color={"white"} ms={2}>
-                  Phone
-                </Text>
-              </Button>
-            </Flex>
+            <Button variant={"cardBtnPurple"}>
+              <FiPhone />
+              <Text textStyle={"body"} color={"white"} ms={2}>
+                Phone
+              </Text>
+            </Button>
           </Link>
           <Link href={"#"}>
-            <Flex justify={"center"} align={"center"}>
-              <Button variant={"cardBtnClear"}>
-                <GoPeople />
-                <Text textStyle={"body"} color={"link"} ms={2}>
-                  Ask the community
-                </Text>
-              </Button>
-            </Flex>
+            <Button variant={"cardBtnClear"}>
+              <GoPeople />
+              <Text textStyle={"body"} color={"link"} ms={2}>
+                Ask the community
+              </Text>
+            </Button>
           </Link>
         </Flex>
       </Flex>

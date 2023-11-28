@@ -5,11 +5,13 @@ export default function CardComponent({
   border,
   borderColor,
   bg,
+  w,
 }: {
   children: React.ReactNode;
   border?: string;
   borderColor?: string;
   bg?: string;
+  w?: string;
 }) {
   return (
     <Flex
@@ -22,6 +24,7 @@ export default function CardComponent({
       borderColor={borderColor ? borderColor : "none"}
       bg={bg ? bg : "none"}
       borderRadius={12}
+      w={w ? w : "auto"}
     >
       {children}
     </Flex>
