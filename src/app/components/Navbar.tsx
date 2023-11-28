@@ -10,6 +10,7 @@ import {
   Box,
   Stack,
   IconButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +19,8 @@ import { CiSearch } from "react-icons/ci";
 import { TfiWorld } from "react-icons/tfi";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { IoIosLogIn } from "react-icons/io";
+import { MdClose } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { data } from "../data/articleData";
 
 export default function Navbar() {
@@ -26,6 +29,7 @@ export default function Navbar() {
     base: "Search",
     lg: "Search anything...(e.g. devices)",
   });
+  const { isOpen, onClose, onOpen } = useDisclosure();
   return (
     <>
       <Flex
@@ -91,44 +95,55 @@ export default function Navbar() {
             <Flex justify={"center"} align={"center"}>
               <Link href={"#"}>
                 <IconButton aria-label="Search database" icon={<CiSearch />} />
+                <IconButton
+                  aria-label="Close Mobile menu"
+                  icon={isOpen ? <MdClose /> : <RxHamburgerMenu />}
+                  onClick={isOpen ? onClose : onOpen}
+                />
               </Link>
             </Flex>
           </Flex>
           {/* mapping over JSON for mobile menu options */}
-          {mobileMenu.map((item, idx) => (
-            <Link key={idx} href={`/${item.slug}`}>
-              <Flex
-                justify={"flex-start"}
-                align={"center"}
-                py={2}
-                px={4}
-                bg={"purple"}
-                borderBottom={"1px solid lightgray"}
-              >
-                <Text textStyle={"body"} color={"text"}>
-                  {item.title}
-                </Text>
-              </Flex>
-            </Link>
-          ))}
-          <Link href={"#"}>
-            <Flex
-              justify={"space-between"}
-              align={"center"}
-              py={2}
-              px={4}
-              bg={"purple"}
-              borderBottom={"1px solid lightgray"}
-            >
-              <Flex justify={"center"} align={"center"}>
-                <TfiWorld />
-                <Button variant={"navBtnclear"} p={2}>
-                  English US
-                </Button>
-              </Flex>
-              <HiOutlineChevronDown />
-            </Flex>
-          </Link>
+          {isOpen ? (
+            <Box>
+              {mobileMenu.map((item, idx) => (
+                <Link key={idx} href={`/${item.slug}`}>
+                  <Flex
+                    justify={"flex-start"}
+                    align={"center"}
+                    py={2}
+                    px={4}
+                    bg={"purple"}
+                    borderBottom={"1px solid lightgray"}
+                  >
+                    <Text textStyle={"body"} color={"text"}>
+                      {item.title}
+                    </Text>
+                  </Flex>
+                </Link>
+              ))}
+              <Link href={"#"}>
+                <Flex
+                  justify={"space-between"}
+                  align={"center"}
+                  py={2}
+                  px={4}
+                  bg={"purple"}
+                  borderBottom={"1px solid lightgray"}
+                >
+                  <Flex justify={"center"} align={"center"}>
+                    <TfiWorld />
+                    <Button variant={"navBtnclear"} p={2}>
+                      English US
+                    </Button>
+                  </Flex>
+                  <HiOutlineChevronDown />
+                </Flex>
+              </Link>
+            </Box>
+          ) : (
+            ""
+          )}
         </Stack>
       </Box>
     </>
