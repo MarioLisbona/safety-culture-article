@@ -67,7 +67,20 @@ export default function Footer() {
             &copy; SafetyCulture 2023
           </Text>
         </Flex>
-        <Flex></Flex>
+        <Flex justify={"center"} align={"center"}>
+          <Link href={"#"}>
+            <Image src="icons/instagram.svg" alt="instagram logo" px={1} />
+          </Link>
+          <Link href={"#"}>
+            <Image src="icons/twitter.svg" alt="twitter logo" px={1} />
+          </Link>
+          <Link href={"#"}>
+            <Image src="icons/linkedin.svg" alt="linkedin logo" px={1} />
+          </Link>
+          <Link href={"#"}>
+            <Image src="icons/youtube.svg" alt="youtube logo" px={1} />
+          </Link>
+        </Flex>
       </Flex>
     </Flex>
   );
