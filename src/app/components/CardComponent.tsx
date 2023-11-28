@@ -17,6 +17,7 @@ export default function CardComponent({
       align={"center"}
       px={4}
       py={8}
+      my={16}
       border={border ? border : "none"}
       borderColor={borderColor ? borderColor : "none"}
       bg={bg ? bg : "none"}
