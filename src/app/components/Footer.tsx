@@ -32,18 +32,22 @@ export default function Footer() {
             h={"30px"}
             px={2}
           />
-          <Image
-            src={"logos/app-store.svg"}
-            alt="SafetyCulture Logo"
-            h={"30px"}
-            px={2}
-          />
-          <Image
-            src={"logos/google-play-store.svg"}
-            alt="SafetyCulture Logo"
-            h={"30px"}
-            px={2}
-          />
+          <Link href={"#"}>
+            <Image
+              src={"logos/app-store.svg"}
+              alt="App store Logo"
+              h={"30px"}
+              px={2}
+            />
+          </Link>
+          <Link href={"#"}>
+            <Image
+              src={"logos/google-play-store.svg"}
+              alt="Google platy store Logo"
+              h={"30px"}
+              px={2}
+            />
+          </Link>
         </Flex>
       </Flex>
       <Flex
