@@ -2,16 +2,16 @@ import { Flex } from "@chakra-ui/react";
 
 export default function CardComponent({
   children,
+  w,
   border,
   borderColor,
   bg,
-  w,
 }: {
   children: React.ReactNode;
+  w: { base: string; md: string };
   border?: string;
   borderColor?: string;
   bg?: string;
-  w?: string;
 }) {
   return (
     <Flex
@@ -24,7 +24,7 @@ export default function CardComponent({
       borderColor={borderColor ? borderColor : "none"}
       bg={bg ? bg : "none"}
       borderRadius={12}
-      w={w ? w : "auto"}
+      w={w}
     >
       {children}
     </Flex>

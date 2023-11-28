@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function PageHelpful() {
   return (
-    <CardComponent bg="purple" w={"75%"}>
+    <CardComponent bg="purple" w={{ base: "75vw", md: "75%" }}>
       <Flex justify={"center"} align={"center"}>
         <Text textStyle={"body"}>{`Was this page helpful? {US}`}</Text>
         <Link href={"#"}>
